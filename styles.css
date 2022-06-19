@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: hsla(0, 0%, 15%, 0.9);
+}
+
+.background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    min-height: 100%;
+    background-image: url("./images/1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+header {
+    grid-column: span 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > div {
+    font-size: 3em;
+    font-size: 700;
+    padding: 10px 30px;
+}
+
+.nav--small {
+    display: none;
+}
+
+.nav--large {
+    position: relative;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav--large > a {
+    text-decoration: none;
+    color: hsla(0, 0%, 15%, 0.8);
+    padding: 10px 20px;
+}
+
+.joinIn {
+    position: relative;
+    padding: 5px 20px;
+    font-weight: 700;
+    border: 1px solid hsla(0, 0%, 15%, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.joinIn::before {
+    content: "";
+    position: absolute;
+    right: 00%;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: hsla(0, 0%, 60%, 0.15);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.joinIn:hover {
+    cursor: pointer;
+}
+
+.joinIn:hover::before {
+    width: 100%;
+}
+
+section {
+    grid-column: span 1;
+    width: 100%;
+    padding: 100px;
+}
+
+section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+section:first-of-type > h1 {
+    font-size: 2em;
+}
+
+section:first-of-type > p {
+    font-size: 0.9em;
+}
+
+.getStarted {
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    padding: 5px 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 1px solid hsla(0, 0%, 15%, 0.8);
+}
+
+.getStarted::before {
+    content: "";
+    position: absolute;
+    right: 00%;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: hsla(0, 0%, 60%, 0.15);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.getStarted:hover {
+    cursor: pointer;
+}
+
+.getStarted:hover::before {
+    width: 100%;
+}
+
+section:nth-of-type(2) {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+section:nth-of-type(2) > div {
+    display: flex;
+}
+
+section:nth-of-type(2) > div > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: center;
+    padding: 2px 5px;
+}
+
+section:nth-of-type(2) > div > img {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-content: center;
+}
+
+.people {
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px 20px;
+}
+
+a:hover {
+    color: hsla(0, 0%, 5%, 1);
+}
+
+@media all and (max-width: 980px) {
+    .nav--large > a {
+        padding: 10px 10px;
+    }
+}
+
+@media all and (max-width: 780px) {
+    .nav--large > a {
+        padding: 10px 5px;
+        font-size: 0.8em;
+    }
+
+    .joinIn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    section:first-of-type > p {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 640px) {
+    /*Tutaj chowmay menu zwyle i rozkladamy menu telefonu */
+
+    .nav--large {
+        display: none;
+    }
+
+    .nav--small {
+        position: absolute;
+        right: 0px;
+        display: grid;
+        place-content: start;
+        height: 40px;
+        overflow: hidden;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .nav--small:hover {
+        height: 100%;
+    }
+
+    .nav--small > a {
+        padding: 5px 15px;
+        text-decoration: none;
+        color: hsla(0, 0%, 15%, 0.8);
+    }
+
+    .nav--small > img {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+
+    header > div {
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+
+    section {
+        grid-column: span 1;
+        width: max(360px, 80vw);
+        margin: 0 auto;
+        padding: 50px 00px;
+        text-align: center;
+    }
+
+    section:first-of-type > h1 {
+        font-size: 1.5em;
+        margin: 100px auto;
+    }
+
+    section:first-of-type > p {
+        margin: 0px auto;
+    }
+
+    .getStarted {
+        margin: 0 auto;
+    }
+
+    section:nth-of-type(2) > div {
+        margin: 0 auto;
+    }
+
+    section:nth-of-type(2) > div > img {
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    a:hover {
+        color: hsla(0, 0%, 5%, 1);
+    }
+}
