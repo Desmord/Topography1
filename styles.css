@@ -37,11 +37,7 @@ header > div {
     padding: 10px 30px;
 }
 
-.nav--small {
-    display: none;
-}
-
-.nav--large {
+.nav {
     position: relative;
     padding: 10px 30px;
     display: flex;
@@ -49,10 +45,14 @@ header > div {
     align-items: center;
 }
 
-.nav--large > a {
+.nav > a {
     text-decoration: none;
     color: hsla(0, 0%, 15%, 0.8);
     padding: 10px 20px;
+}
+
+.nav--img{
+    display: none;
 }
 
 .joinIn {
@@ -178,13 +178,13 @@ a:hover {
 }
 
 @media all and (max-width: 980px) {
-    .nav--large > a {
+    .nav > a {
         padding: 10px 10px;
     }
 }
 
 @media all and (max-width: 780px) {
-    .nav--large > a {
+    .nav > a {
         padding: 10px 5px;
         font-size: 0.8em;
     }
@@ -200,13 +200,8 @@ a:hover {
 }
 
 @media all and (max-width: 640px) {
-    /*Tutaj chowmay menu zwyle i rozkladamy menu telefonu */
 
-    .nav--large {
-        display: none;
-    }
-
-    .nav--small {
+    .nav {
         position: absolute;
         right: 0px;
         display: grid;
@@ -216,22 +211,28 @@ a:hover {
         transition: all 0.8s ease-in-out;
     }
 
-    .nav--small:hover {
-        height: 100%;
-    }
-
-    .nav--small > a {
+    .nav > a {
         padding: 5px 15px;
         text-decoration: none;
         color: hsla(0, 0%, 15%, 0.8);
     }
 
-    .nav--small > img {
+    .nav:hover {
+        height: 200px;
+    }
+
+    .nav--img{
+        display: block;
         position: relative;
         width: 40px;
         height: 40px;
         padding: 10px 20px;
     }
+
+    .joinIn{
+        display: none;
+    }
+
 
     header > div {
         font-size: 2em;
@@ -256,15 +257,13 @@ a:hover {
     }
 
     .getStarted {
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
     section:nth-of-type(2) > div {
         margin: 0 auto;
     }
 
-    section:nth-of-type(2) > div > img {
-    }
 
     footer {
         font-size: 0.8em;
